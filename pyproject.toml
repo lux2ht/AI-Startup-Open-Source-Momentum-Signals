@@ -1,0 +1,9 @@
+[project]
+name = "momentum-signals"
+version = "0.1.0"
+description = "Self-updating platform tracking open-source repo momentum"
+requires-python = ">=3.11"
+
+[tool.pytest.ini_options]
+addopts = "-q"
+testpaths = ["tests"]

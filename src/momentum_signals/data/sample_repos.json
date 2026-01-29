@@ -1,0 +1,32 @@
+[
+  {
+    "repo": "openai/openai-python",
+    "stars": 25150,
+    "forks": 3120,
+    "commits_30d": 62,
+    "issues_30d": 45,
+    "contributors": 210,
+    "release_recency_days": 14,
+    "star_velocity": 140.5
+  },
+  {
+    "repo": "tiangolo/fastapi",
+    "stars": 74900,
+    "forks": 6400,
+    "commits_30d": 39,
+    "issues_30d": 80,
+    "contributors": 450,
+    "release_recency_days": 21,
+    "star_velocity": 95.2
+  },
+  {
+    "repo": "pallets/flask",
+    "stars": 66800,
+    "forks": 16000,
+    "commits_30d": 18,
+    "issues_30d": 25,
+    "contributors": 320,
+    "release_recency_days": 60,
+    "star_velocity": 12.4
+  }
+]
