@@ -1,32 +1,28 @@
 app:
-  name: ai-startup-momentum-signals
-  environment: dev
+  name: momentum-signals
+  environment: local
 
-scheduler:
-  cadence: "0 * * * *" # hourly cron
+api:
+  host: 0.0.0.0
+  port: 8000
+  api_key: "change-me"
 
 storage:
-  database_url: "postgresql://user:password@localhost:5432/momentum_signals"
+  db_path: "./momentum_signals.db"
 
-apis:
+sources:
   github:
-    base_url: "https://api.github.com"
-    token: "${GITHUB_TOKEN}"
-  hacker_news:
-    base_url: "https://hacker-news.firebaseio.com/v0"
-  reddit:
-    base_url: "https://oauth.reddit.com"
-    client_id: "${REDDIT_CLIENT_ID}"
-    client_secret: "${REDDIT_CLIENT_SECRET}"
-    user_agent: "momentum-signals/0.1"
-  job_boards:
-    greenhouse_base_url: "https://boards-api.greenhouse.io/v1/boards"
-    lever_base_url: "https://api.lever.co/v0/postings"
+    enabled: false
+    token: ""
+    repos:
+      - "openai/openai-python"
+      - "tiangolo/fastapi"
+      - "pallets/flask"
 
 scoring:
   weights:
-    product_velocity: 0.35
-    market_attention: 0.25
-    hiring_momentum: 0.25
-    community_engagement: 0.15
-  min_signal_threshold: 0.6
+    commits_30d: 0.35
+    star_velocity: 0.25
+    issues_30d: 0.15
+    contributors: 0.15
+    release_recency: 0.10
